@@ -19,22 +19,18 @@ export const MOBO_BASE_WATTS = 50;
 
 // ---------- Pairing rules ----------
 
-/* CPU socket must match the motherboard socket. */
 export function socketMatch(cpu: Cpu, mobo: Mobo): boolean {
   return cpu.socket === mobo.socket;
 }
 
-/* RAM type (DDR4/DDR5) must match what the motherboard supports. */
 export function ramMatch(mobo: Mobo, ram: Ram): boolean {
   return mobo.ramType === ram.type;
 }
 
-/* The case must be able to hold the motherboard's form factor. */
 export function caseMatch(mobo: Mobo, pcCase: Case): boolean {
   return pcCase.formFactors.includes(mobo.formFactor);
 }
 
-/* A dedicated GPU is required when the CPU has no integrated graphics. */
 export function needsGPU(cpu: Cpu): boolean {
   return !cpu.hasIGPU;
 }

@@ -11,7 +11,7 @@ import type {
     Gpu, 
     Psu, 
     Case 
-} from "./types";
+} from "@/types/types.ts";
 
 export const CPUS: Cpu[] = [
   {

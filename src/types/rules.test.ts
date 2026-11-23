@@ -8,9 +8,9 @@ import {
   GPUS,
   PSUS,
   CASES,
-} from "./dataset";
+} from "@/types/dataset.ts";
 
-import { EMPTY_BUILD, type Build } from "../catalog/types";
+import { EMPTY_BUILD, type Build } from "@/types/types.ts";
 
 import {
   socketMatch,
@@ -23,7 +23,7 @@ import {
   totalPrice,
   filterCompatible,
   MOBO_BASE_WATTS,
-} from "./rules";
+} from "@/types/rules.ts";
 
 // Look a part up by id; throws if the id is wrong so tests fail
 function get<T extends { id: string }>(list: T[], id: string): T {

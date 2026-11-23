@@ -9,7 +9,7 @@ import type {
   Case,
   Part,
   Storage,
-} from "./types";
+} from "@/types/types.ts";
 
 // PSU must supply at least (total estimated watts) x 1.2
 export const PSU_HEADROOM = 1.2;
